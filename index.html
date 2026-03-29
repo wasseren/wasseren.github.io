@@ -3,122 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wasseren | Accelerating Australia's Energy Transition</title>
+    <title>Wasseren | Accelerating the Energy Transition</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+        .accent-border {
+            border-image: linear-gradient(to right, #f59e0b, #3b82f6) 1;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans">
 
-    <nav class="bg-white border-b sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tighter text-blue-900">WASSEREN</div>
-            <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wide">
-                <a href="#services" class="hover:text-blue-600">Services</a>
-                <a href="#sectors" class="hover:text-blue-600">Focus Areas</a>
-                <a href="#process" class="hover:text-blue-600">How We Work</a>
-                <a href="#contact" class="bg-blue-900 text-white px-4 py-2 rounded">Contact Us</a>
+    <nav class="bg-white/90 backdrop-blur-md border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="logo.png" alt="Wasseren Logo" class="h-12">
+                <span class="text-2xl font-bold tracking-tighter text-blue-900 uppercase">WASSEREN</span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-semibold text-xs uppercase tracking-widest">
+                <a href="#about" class="hover:text-amber-500 transition">About</a>
+                <a href="#services" class="hover:text-amber-500 transition">Services</a>
+                <a href="#focus" class="hover:text-amber-500 transition">Focus Areas</a>
+                <a href="#track-record" class="hover:text-amber-500 transition">Track Record</a>
+                <a href="#contact" class="bg-blue-900 text-white px-5 py-2 rounded-full hover:bg-amber-600 transition">Contact</a>
             </div>
         </div>
     </nav>
 
-    <header class="bg-blue-900 text-white py-24">
-        <div class="max-w-5xl mx-auto px-6">
-            <h1 class="text-5xl font-extrabold mb-6 leading-tight">
-                Accelerating Australia’s energy transition through capital, industry partnerships and technology translation.
+    <header class="gradient-bg text-white py-28 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-amber-500 opacity-10 skew-x-12 translate-x-20"></div>
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-8 leading-[1.1]">
+                Accelerating energy transition through capital, industry partnerships and technology translation.
             </h1>
-            <p class="text-xl text-blue-100 max-w-3xl mb-4">
-                Wasseren leads and supports investments in energy storage and renewable power assets, while enabling market entry, scale-up and commercialisation of next-generation energy technologies.
+            <p class="text-xl text-blue-100 max-w-3xl mb-6 leading-relaxed">
+                Wasseren leads and supports investments in energy storage and renewable power assets, while enabling market entry, scale-up and commercialisation of next-generation energy technologies and products.
             </p>
-            <p class="text-lg text-blue-200 max-w-3xl">
-                We complement the networks of research organisations, industry and government by delivering late-stage translation: use-case selection, partner-chain structuring, and demonstration-to-commercial execution.
+            <p class="text-lg text-blue-200 max-w-3xl mb-10 italic">
+                We complement the networks of research organisations, industry and government by delivering late-stage translation: use-case selection, partner-chain structuring, funding stack mobilisation, and demonstration-to-commercial execution.
             </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#contact" class="bg-amber-500 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-white transition">Partner With Us</a>
+                <a href="#services" class="border-2 border-white/30 px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition">Explore Services</a>
+            </div>
         </div>
     </header>
 
-    <section class="py-20 max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-12 text-center">Who We Serve</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="bg-white p-8 border-t-4 border-blue-900 shadow-sm">
+    <section class="py-12 bg-white border-b">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+            <div class="text-center">
+                <h4 class="font-bold text-blue-900 mb-2">Policy-to-Project</h4>
+                <p class="text-sm text-slate-500">Convert priorities into auditable programs and bankable projects.</p>
+            </div>
+            <div class="text-center">
+                <h4 class="font-bold text-blue-900 mb-2">Sovereign Capability</h4>
+                <p class="text-sm text-slate-500">Build domestic pathways to reduce reliance on offshore solutions.</p>
+            </div>
+            <div class="text-center">
+                <h4 class="font-bold text-blue-900 mb-2">Industry Adoption</h4>
+                <p class="text-sm text-slate-500">End-to-end partner ecosystems and demonstration-ready use cases.</p>
+            </div>
+            <div class="text-center">
+                <h4 class="font-bold text-blue-900 mb-2">Investment-Ready</h4>
+                <p class="text-sm text-slate-500">Credible funding stacks and milestone-based de-risking.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-blue-900 mb-4">Who We Serve</h2>
+            <p class="text-slate-600 max-w-2xl mx-auto">We work across the energy transition value chain to connect capital, technology and industry—accelerating adoption and measurable impact.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 font-bold">01</div>
                 <h3 class="font-bold text-xl mb-4">Investors</h3>
-                <p class="text-slate-600 text-sm">Investable pathways (pilot→demo→scale), partner-backed execution plans, and objective diligence.</p>
+                <p class="text-slate-600 text-sm leading-relaxed">Investable pathways (pilot→demo→scale), partner-backed execution plans, and objective technical–commercial diligence.</p>
             </div>
-            <div class="bg-white p-8 border-t-4 border-blue-900 shadow-sm">
-                <h3 class="font-bold text-xl mb-4">Research & CSIRO</h3>
-                <p class="text-slate-600 text-sm">Commercialisation acceleration: partner-chain structuring, funding stacks, and industry engagement.</p>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 font-bold">02</div>
+                <h3 class="font-bold text-xl mb-4">Research Orgs</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Commercialisation acceleration: partner-chain structuring, funding stacks, and industry engagement.</p>
             </div>
-            <div class="bg-white p-8 border-t-4 border-blue-900 shadow-sm">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 font-bold">03</div>
                 <h3 class="font-bold text-xl mb-4">Industrial Clients</h3>
-                <p class="text-slate-600 text-sm">Compliance-ready deployment plans, demonstration programs, and commercial structures.</p>
+                <p class="text-slate-600 text-sm leading-relaxed">Technology adoption support: compliance-ready deployment plans and demonstration programs.</p>
             </div>
-            <div class="bg-white p-8 border-t-4 border-blue-900 shadow-sm">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 font-bold">04</div>
                 <h3 class="font-bold text-xl mb-4">Government</h3>
-                <p class="text-slate-600 text-sm">Investment attraction, program design, and sovereign capability outcomes (jobs, industry uplift).</p>
+                <p class="text-slate-600 text-sm leading-relaxed">Investment attraction, program design input, and sovereign capability outcomes (jobs, industry uplift).</p>
             </div>
         </div>
     </section>
 
-    <section id="services" class="bg-slate-100 py-20">
+    <section id="services" class="bg-slate-900 text-white py-24">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-16">
-                <h2 class="text-3xl font-bold mb-4 text-blue-900">What We Do</h2>
-                <p class="text-slate-600 max-w-2xl">Wasseren operates as a commercialisation and industry-linkage platform. We help move from R&D outcomes to adopted solutions and bankable projects.</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-xl font-bold mb-4 border-b pb-2">Investments & Capital</h3>
-                    <ul class="space-y-3 text-slate-700">
-                        <li>• Lead/support energy storage & renewable assets</li>
-                        <li>• Build funding stacks (grants + private capital)</li>
-                        <li>• Milestone-based de-risking plans</li>
-                    </ul>
+            <div class="grid lg:grid-cols-3 gap-16">
+                <div class="lg:col-span-1">
+                    <h2 class="text-4xl font-bold mb-6">What We Do</h2>
+                    <p class="text-slate-400 mb-8 leading-relaxed">
+                        Wasseren operates as a commercialisation and industry-linkage platform. We help technology owners, project sponsors and public agencies move from priorities and R&D outcomes to adopted solutions and bankable projects.
+                    </p>
+                    <div class="p-6 bg-blue-800/30 rounded-xl border border-blue-700">
+                        <h4 class="font-bold mb-2">International Sourcing</h4>
+                        <p class="text-sm text-blue-200 italic">Identifying proven international technologies to accelerate translation under Australian regulatory conditions.</p>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4 border-b pb-2">Policy-to-Project Execution</h3>
-                    <ul class="space-y-3 text-slate-700">
-                        <li>• Translate national priorities (H2, Critical Minerals)</li>
-                        <li>• Define auditable outcomes & KPIs</li>
-                        <li>• Stakeholder alignment across ecosystems</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4 border-b pb-2">Commercialisation Pathways</h3>
-                    <ul class="space-y-3 text-slate-700">
-                        <li>• Define Pilot/DEMO pathways & HSE governance</li>
-                        <li>• Design JV, licensing, and offtake structures</li>
-                        <li>• Demonstration host identification</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4 border-b pb-2">Industry Partnerships</h3>
-                    <ul class="space-y-3 text-slate-700">
-                        <li>• Structure end-to-end partner chains</li>
-                        <li>• Create execution-ready MoUs</li>
-                        <li>• Market adoption & value proposition packaging</li>
-                    </ul>
+                <div class="lg:col-span-2 grid md:grid-cols-2 gap-x-12 gap-y-12">
+                    <div>
+                        <h3 class="text-amber-500 font-bold uppercase tracking-widest text-sm mb-4">01. Investments & Capital</h3>
+                        <ul class="space-y-4 text-slate-300 text-sm">
+                            <li class="flex items-start"><span class="text-amber-500 mr-2">→</span> Lead and support investments in energy storage and renewable power assets.</li>
+                            <li class="flex items-start"><span class="text-amber-500 mr-2">→</span> Develop funding stacks combining grants, concessional finance and private capital.</li>
+                            <li class="flex items-start"><span class="text-amber-500 mr-2">→</span> Milestone-based de-risking plans for demonstration and scale-up.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-amber-500 font-bold uppercase tracking-widest text-sm mb-4">02. Policy-to-Project</h3>
+                        <ul class="space-y-4 text-slate-300 text-sm">
+                            <li class="flex items-start"><span class="text-amber-500 mr-2">→</span> Translate national/state priorities (critical minerals, H2) into deliverable programs.</li>
+                            <li class="flex items-start"><span class="text-amber-500 mr-2">→</span> Define auditable outcomes (jobs, local value-add, emissions abatement).</li>
+                            <li class="flex items-start"><span class="text-amber-500 mr-2">→</span> Support stakeholder alignment across research and industry ecosystems.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-amber-500 font-bold uppercase tracking-widest text-sm mb-4">03. Commercialisation Pathways</h3>
+                        <ul class="space-y-4 text-slate-300 text-sm">
+                            <li class="flex items-start"><span class="text-amber-500 mr-2">→</span> Define pilot/DEMO pathways with governance, HSE, and go/no-go criteria.</li>
+                            <li class="flex items-start"><span class="text-amber-500 mr-2">→</span> Design licensing, JV, and offtake-linked commercial structures.</li>
+                            <li class="flex items-start"><span class="text-amber-500 mr-2">→</span> Identification and onboarding of demonstration host partners.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-amber-500 font-bold uppercase tracking-widest text-sm mb-4">04. Industry Partnerships</h3>
+                        <ul class="space-y-4 text-slate-300 text-sm">
+                            <li class="flex items-start"><span class="text-amber-500 mr-2">→</span> Structure end-to-end partner chains from feedstock to operations.</li>
+                            <li class="flex items-start"><span class="text-amber-500 mr-2">→</span> Create execution-ready MoUs and multi-stakeholder collaboration frameworks.</li>
+                            <li class="flex items-start"><span class="text-amber-500 mr-2">→</span> Market adoption: segment prioritisation and early adopter targeting.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-20 max-w-3xl mx-auto px-6">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold mb-4">Start a Collaboration</h2>
-            <p class="text-slate-600">Adelaide | Melbourne | Sydney</p>
+    <section id="focus" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-blue-900 mb-12 text-center">Strategic Focus Areas</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="border-l-4 border-amber-500 pl-6 py-2">
+                    <h3 class="font-bold text-lg mb-2 text-blue-900">Battery Circular Economy</h3>
+                    <p class="text-sm text-slate-600">Recycling, electrolyte recovery, and commercial pathways.</p>
+                </div>
+                <div class="border-l-4 border-amber-500 pl-6 py-2">
+                    <h3 class="font-bold text-lg mb-2 text-blue-900">Energy Storage</h3>
+                    <p class="text-sm text-slate-600">Investment and commercialisation of renewable power assets.</p>
+                </div>
+                <div class="border-l-4 border-amber-500 pl-6 py-2">
+                    <h3 class="font-bold text-lg mb-2 text-blue-900">Hydrogen</h3>
+                    <p class="text-sm text-slate-600">Industrial decarbonisation and market development.</p>
+                </div>
+                <div class="border-l-4 border-amber-500 pl-6 py-2">
+                    <h3 class="font-bold text-lg mb-2 text-blue-900">Climate Finance</h3>
+                    <p class="text-sm text-slate-600">Policy evaluation and investment alignment for markets.</p>
+                </div>
+            </div>
         </div>
-        <form class="space-y-4">
-            <input type="text" placeholder="Organisation" class="w-full p-3 border rounded">
-            <select class="w-full p-3 border rounded text-slate-500">
-                <option>Role: Investor</option>
-                <option>Role: Research / CSIRO</option>
-                <option>Role: Industrial</option>
-                <option>Role: Government</option>
-            </select>
-            <textarea placeholder="Message" rows="4" class="w-full p-3 border rounded"></textarea>
-            <button class="w-full bg-blue-900 text-white font-bold py-4 rounded uppercase tracking-widest">Send Inquiry</button>
-        </form>
     </section>
 
-    <footer class="bg-slate-900 text-slate-400 py-12 text-center text-sm">
-        <p>© 2026 Wasseren Pty Ltd. All Rights Reserved.</p>
+    <section id="track-record" class="py-24 bg-slate-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-blue-900 mb-12 text-center">Track Record Highlights</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center gap-6">
+                    <div class="text-blue-900 font-bold text-xl px-4 border-r">01</div>
+                    <p class="text-slate-700"><strong>Climate Finance / Policy:</strong> Terminal Evaluation for an IFC (World Bank Group) advisory program.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center gap-6">
+                    <div class="text-blue-900 font-bold text-xl px-4 border-r">02</div>
+                    <p class="text-slate-700"><strong>Energy Storage:</strong> Industrialisation advisory with Australian universities and industry partners.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center gap-6">
+                    <div class="text-blue-900 font-bold text-xl px-4 border-r">03</div>
+                    <p class="text-slate-700"><strong>Hydrogen Tech:</strong> Led market and business-model studies for strategic investment decisions.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center gap-6">
+                    <div class="text-blue-900 font-bold text-xl px-4 border-r">04</div>
+                    <p class="text-slate-700"><strong>Industrial Decarbonisation:</strong> Supported low-carbon transition and partner engagement for heavy industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="bg-blue-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+            <div class="p-12 md:w-1/2 text-white">
+                <h2 class="text-3xl font-bold mb-6">Discuss a Collaboration</h2>
+                <p class="text-blue-200 mb-8">Ready to move from R&D outcomes to adopted solutions? Contact us.</p>
+<div class="space-y-6">
+    <div class="flex items-center space-x-4">
+        <div class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center shrink-0">📧</div>
+        <div>
+            <p class="text-xs text-blue-300 uppercase">Email</p>
+            <p class="font-bold">wasseren@outlook.com</p>
+        </div>
+    </div>
+
+    <div class="flex items-start space-x-4">
+        <div class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center shrink-0">🌏</div>
+        <div>
+            <p class="text-xs text-blue-300 uppercase">Presence & Engagement</p>
+            <p class="font-bold">Adelaide-based | National Coverage</p>
+            <div class="mt-2 flex items-start space-x-2 text-sm text-blue-100 italic">
+                <span>🏢</span>
+                <p>Meeting location (by appointment):<br>
+                Level 8, 25 Franklin Street, Adelaide SA 5000</p>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="bg-white p-12 md:w-1/2">
+                <form action="https://formspree.io/f/wasseren@outlook.com" method="POST" class="space-y-4">
+                    <div>
+                        <label class="text-xs font-bold uppercase text-slate-500">Name</label>
+                        <input type="text" name="name" class="w-full p-3 border-b-2 border-slate-200 focus:border-blue-900 outline-none transition" required>
+                    </div>
+                    <div>
+                        <label class="text-xs font-bold uppercase text-slate-500">Organisation</label>
+                        <input type="text" name="org" class="w-full p-3 border-b-2 border-slate-200 focus:border-blue-900 outline-none transition">
+                    </div>
+                    <div>
+                        <label class="text-xs font-bold uppercase text-slate-500">Your Interest</label>
+                        <select name="interest" class="w-full p-3 border-b-2 border-slate-200 focus:border-blue-900 outline-none transition bg-transparent">
+                            <option>Investment Opportunities</option>
+                            <option>Technology Commercialisation</option>
+                            <option>Industry Partnerships</option>
+                            <option>Government / Policy Execution</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="text-xs font-bold uppercase text-slate-500">Message</label>
+                        <textarea name="message" rows="3" class="w-full p-3 border-b-2 border-slate-200 focus:border-blue-900 outline-none transition" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-amber-500 text-blue-900 font-extrabold py-4 rounded-lg uppercase tracking-widest hover:bg-blue-900 hover:text-white transition">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-500 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <p class="font-bold text-white tracking-widest text-sm uppercase">WASSEREN PTY LTD</p>
+                <p class="text-xs mt-1">Capital. Partnership. Deployment.</p>
+            </div>
+            <p class="text-xs">© 2026 Wasseren Pty Ltd. All Rights Reserved.</p>
+        </div>
     </footer>
 
 </body>
