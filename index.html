@@ -246,6 +246,49 @@
 .opp-card ul, .cred-card ul {
     margin: 10px 0 0 18px;
 }
+
+/* Fix for text visibility in Opportunity, Process, and Credential cards */
+.process-card p,
+.opp-card p,
+.cred-card p {
+    color: #38506d; /* A dark navy-grey for high contrast */
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Also update the note at the bottom for better visibility */
+.note-line {
+    color: #38506d;
+    font-weight: 500;
+}
+
+/* Fix visibility for all light-background cards */
+.opp-card p,
+.cred-card li,
+.process-card p,
+.process-card li {
+    color: #38506d !important; /* Dark slate blue for high contrast */
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.cred-card h3,
+.opp-card h3,
+.process-card h3 {
+    color: #123a70 !important; /* Deep navy for headings */
+    font-weight: 700;
+}
+
+/* Enhancing the list markers for the Track Record section */
+.cred-card ul {
+    padding-left: 20px;
+    margin-top: 12px;
+}
+
+.cred-card li {
+    margin-bottom: 8px;
+}
+
 .geo-line {
     margin-top: 16px;
     padding: 16px 18px;
@@ -625,17 +668,17 @@ style="width:100%;height:170px;object-fit:cover;border-radius:12px;margin:12px 0
     <div class="opps-grid">
       <div class="opp-card">
         <h3>Grid-scale BESS</h3>
-        <span class="opp-meta">South Australia / New South Wales · early-stage to active screening</span>
+        <!-- <span class="opp-meta">South Australia / New South Wales · early-stage to active screening</span> -->
         <p>Supporting investor alignment, commercial screening and partnership discussions around utility-scale battery storage opportunities, with attention to approvals, connection pathway, delivery capability and capital fit.</p>
       </div>
       <div class="opp-card">
         <h3>Wind + BESS hybrid platforms</h3>
-        <span class="opp-meta">Australia · development and investment alignment</span>
+        <!-- <span class="opp-meta">Australia · development and investment alignment</span> -->
         <p>Engaging around renewable generation and storage combinations where project origination, capital matching and structured collaboration can accelerate route-to-market and long-term asset value creation.</p>
       </div>
       <div class="opp-card">
         <h3>Battery circular economy</h3>
-        <span class="opp-meta">Australia market entry · industrial collaboration</span>
+        <!-- <span class="opp-meta">Australia market entry · industrial collaboration</span> -->
         <p>Exploring battery recycling, electrolyte and materials recovery, and adjacent circular economy opportunities where technology commercialisation, industrial partners and research institutions need to be connected in a practical way.</p>
       </div>
     </div>
