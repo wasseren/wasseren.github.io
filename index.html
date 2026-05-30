@@ -106,6 +106,49 @@
       color: var(--blue);
     }
 
+    .nav-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      color: var(--navy);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .nav-toggle span,
+    .nav-toggle::before,
+    .nav-toggle::after {
+      content: "";
+      display: block;
+      width: 18px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      transition: transform 180ms ease, opacity 180ms ease;
+    }
+
+    .nav-toggle span {
+      margin: 5px 0;
+    }
+
+    .nav-toggle[aria-expanded="true"]::before {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle[aria-expanded="true"] span {
+      opacity: 0;
+    }
+
+    .nav-toggle[aria-expanded="true"]::after {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
     .nav-cta {
       padding: 10px 14px;
       border: 1px solid var(--line);
@@ -756,15 +799,57 @@
         width: min(var(--max), calc(100% - 28px));
       }
 
-      .topbar {
-        position: static;
+      .nav {
+        min-height: 66px;
+        align-items: center;
+        padding: 10px 0;
       }
 
-      .nav,
+      .brand {
+        min-width: 0;
+      }
+
+      .brand span {
+        font-size: 14px;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+        flex: 0 0 auto;
+      }
+
+      .nav-links {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        top: calc(100% + 1px);
+        z-index: 40;
+        display: none;
+        padding: 14px;
+        border: 1px solid rgba(20, 34, 53, 0.1);
+        border-radius: 0 0 8px 8px;
+        background: #fff;
+        box-shadow: 0 18px 34px rgba(17, 34, 51, 0.12);
+        backdrop-filter: blur(16px);
+      }
+
+      .topbar.is-open .nav-links {
+        display: flex;
+      }
+
       .nav-links,
       .actions {
         align-items: flex-start;
         flex-direction: column;
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 8px 0;
+      }
+
+      .nav-cta {
+        text-align: center;
       }
 
       .hero {
@@ -807,7 +892,10 @@
         <img src="logo.png" alt="Wasseren logo">
         <span>WASSEREN</span>
       </a>
-      <nav class="nav-links" aria-label="Primary navigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span>
+      </button>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
         <a href="#market-entry">Market Entry</a>
         <a href="#services">Services</a>
         <a href="#focus">Focus</a>
@@ -1130,5 +1218,36 @@
       <span>Australian renewable energy market entry and investment support.</span>
     </div>
   </footer>
+  <script>
+    const topbar = document.querySelector(".topbar");
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    function setMenu(open) {
+      topbar.classList.toggle("is-open", open);
+      navToggle.setAttribute("aria-expanded", String(open));
+      navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    }
+
+    navToggle.addEventListener("click", () => {
+      setMenu(navToggle.getAttribute("aria-expanded") !== "true");
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => setMenu(false));
+    });
+
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setMenu(false);
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 680) {
+        setMenu(false);
+      }
+    });
+  </script>
 </body>
 </html>
