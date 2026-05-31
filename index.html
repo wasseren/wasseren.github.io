@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Wasseren helps international capital and technology investors enter Australia's renewable energy market through curated deal access, risk filtering, local partnering and execution support.">
-  <title>Wasseren | Australian Renewable Energy Market Entry</title>
+  <meta name="description" content="Wasseren helps align capital, technology, industry, research and government partners to advance renewable energy, storage, industrial decarbonisation and infrastructure opportunities in Australia.">
+  <title>Wasseren | Energy Transition Deployment Platform</title>
   <style>
     :root {
       --ink: #142235;
@@ -515,66 +515,74 @@
       color: #e3edf5;
     }
 
-    .why-intro {
+    .why-platform {
       display: grid;
-      grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
-      gap: 22px;
-      margin-bottom: 24px;
+      grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 10px 32px rgba(16, 42, 67, 0.06);
     }
 
-    .why-panel {
-      border-radius: 8px;
-      padding: 28px;
+    .why-summary {
+      padding: 34px;
       background: var(--navy);
       color: #fff;
     }
 
-    .why-panel h3 {
+    .why-summary h3 {
       margin-bottom: 10px;
       font-size: 25px;
     }
 
-    .why-panel p {
+    .why-summary p {
       color: #d5e2ed;
       margin-bottom: 0;
     }
 
-    .why-core {
+    .why-capability-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 12px;
+      gap: 0;
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
     }
 
-    .why-core span {
-      display: flex;
-      min-height: 94px;
-      align-items: center;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #fff;
-      color: var(--navy);
+    .why-capability-list li {
+      padding: 12px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      color: #f3f8fc;
       font-weight: 850;
       line-height: 1.2;
-      padding: 18px;
     }
 
-    .platform-grid {
+    .why-matrix {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
+      gap: 0;
+      padding: 8px 28px;
     }
 
-    .platform-card {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #fff;
-      padding: 24px;
+    .why-capability {
+      padding: 24px 20px;
+      border-bottom: 1px solid var(--line);
     }
 
-    .platform-card h3 {
+    .why-capability:nth-last-child(-n + 3) {
+      border-bottom: 0;
+    }
+
+    .why-capability h3 {
       color: var(--navy);
-      font-size: 21px;
-      margin-bottom: 14px;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .why-capability p {
+      color: var(--muted);
+      margin-bottom: 0;
+      font-size: 15px;
     }
 
     .process {
@@ -676,34 +684,6 @@
     .proof-card p {
       margin-bottom: 0;
       color: #b9c9d6;
-    }
-
-    .capability-band {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 1px;
-      overflow: hidden;
-      border-radius: 8px;
-      border: 1px solid var(--line);
-      background: var(--line);
-    }
-
-    .capability {
-      min-height: 184px;
-      padding: 22px;
-      background: #fff;
-    }
-
-    .capability h3 {
-      color: var(--navy);
-      font-size: 19px;
-      margin-bottom: 10px;
-    }
-
-    .capability p {
-      color: var(--muted);
-      margin-bottom: 0;
-      font-size: 15px;
     }
 
     .outcomes {
@@ -838,7 +818,7 @@
       .section-head,
       .split,
       .market-grid,
-      .why-intro,
+      .why-platform,
       .outcomes,
       .contact-box {
         grid-template-columns: 1fr;
@@ -846,11 +826,17 @@
 
       .grid-3,
       .grid-4,
-      .why-core,
-      .platform-grid,
-      .process,
-      .capability-band {
+      .why-matrix,
+      .process {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .why-capability:nth-last-child(-n + 3) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .why-capability:nth-last-child(-n + 2) {
+        border-bottom: 0;
       }
 
       .process-step {
@@ -935,14 +921,20 @@
 
       .grid-3,
       .grid-4,
-      .why-core,
-      .platform-grid,
+      .why-matrix,
       .process,
       .focus-grid,
       .proof,
-      .capability-band,
       .outcome-metrics {
         grid-template-columns: 1fr;
+      }
+
+      .why-capability:nth-last-child(-n + 2) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .why-capability:last-child {
+        border-bottom: 0;
       }
 
       .service-row {
@@ -976,16 +968,16 @@
     <section class="hero" aria-label="Wasseren introduction">
       <div class="container hero-inner">
         <div>
-          <span class="eyebrow">Capital · Infrastructure · Technology</span>
+          <span class="eyebrow">Capital. Technology. Industry. Deployment</span>
           <h1>Accelerating the energy transition through capital, infrastructure and technology translation.</h1>
-          <p class="hero-copy">Wasseren leads and supports investments in energy storage and renewable power assets, while enabling market entry, scale-up and commercialisation of next-generation energy technologies and products.</p>
+          <p class="hero-copy">Wasseren leads and supports investments in energy storage and renewable power assets, while enabling market access, scale-up and commercialisation of next-generation energy technologies and products.</p>
           <div class="actions">
-            <a class="btn btn-primary" href="#market-entry">Explore the model</a>
+            <a class="btn btn-primary" href="#deployment-platform">Explore the model</a>
             <a class="btn btn-secondary" href="#contact">Discuss opportunities</a>
           </div>
         </div>
         <aside class="hero-panel" aria-label="Selected proof points">
-          <h2>Investor-relevant depth</h2>
+          <h2>Deployment-relevant depth</h2>
           <div class="metrics">
             <div class="metric">
               <strong>10 GW+</strong>
@@ -1001,7 +993,7 @@
             </div>
             <div class="metric">
               <strong>3-9 months</strong>
-              <span>targeted market-entry acceleration versus a multi-year ramp-up</span>
+              <span>targeted pathway acceleration versus a multi-year ramp-up</span>
             </div>
           </div>
         </aside>
@@ -1017,88 +1009,56 @@
           </div>
           <p>Wasseren Energy combines development, finance, industrial transition, technology commercialisation and public-sector engagement so opportunities can move from strategy into deployable projects.</p>
         </div>
-        <div class="why-intro">
-          <article class="why-panel">
+        <div class="why-platform">
+          <article class="why-summary">
             <h3>A unique combination of capabilities</h3>
             <p>The model brings together the core inputs needed to shape credible energy-transition investments and partnerships.</p>
+            <ul class="why-capability-list" aria-label="Core Wasseren capabilities">
+              <li>Project Development</li>
+              <li>Capital Alignment</li>
+              <li>Industrial Transition</li>
+              <li>Technology Commercialisation</li>
+              <li>Government Engagement</li>
+            </ul>
           </article>
-          <div class="why-core" aria-label="Core Wasseren capabilities">
-            <span>Project Development</span>
-            <span>Capital Alignment</span>
-            <span>Industrial Transition</span>
-            <span>Technology Commercialisation</span>
-            <span>Government Engagement</span>
+          <div class="why-matrix" aria-label="Wasseren platform capability areas">
+            <article class="why-capability">
+              <h3>Capital</h3>
+              <p>Investment structuring, climate finance, strategic partnerships and cross-border transactions</p>
+            </article>
+            <article class="why-capability">
+              <h3>Project Development</h3>
+              <p>Wind, solar, BESS, hydrogen and project origination</p>
+            </article>
+            <article class="why-capability">
+              <h3>Grid &amp; Infrastructure</h3>
+              <p>Grid connection, transmission, substations, network integration and owner's engineering</p>
+            </article>
+            <article class="why-capability">
+              <h3>Industry</h3>
+              <p>Manufacturing, heavy industry, decarbonisation and energy productivity</p>
+            </article>
+            <article class="why-capability">
+              <h3>Technology</h3>
+              <p>Universities, demonstration projects, commercialisation and industrialisation</p>
+            </article>
+            <article class="why-capability">
+              <h3>Government</h3>
+              <p>Policy engagement, investment attraction, economic development and international cooperation</p>
+            </article>
           </div>
-        </div>
-        <div class="platform-grid" aria-label="Wasseren platform capability areas">
-          <article class="platform-card">
-            <h3>Capital</h3>
-            <ul class="check-list">
-              <li>Investment structuring</li>
-              <li>Climate finance</li>
-              <li>Strategic partnerships</li>
-              <li>Cross-border transactions</li>
-            </ul>
-          </article>
-          <article class="platform-card">
-            <h3>Project Development</h3>
-            <ul class="check-list">
-              <li>Wind</li>
-              <li>Solar</li>
-              <li>BESS</li>
-              <li>Hydrogen</li>
-              <li>Project origination</li>
-            </ul>
-          </article>
-          <article class="platform-card">
-            <h3>Grid &amp; Infrastructure</h3>
-            <ul class="check-list">
-              <li>Grid connection</li>
-              <li>Transmission</li>
-              <li>Substations</li>
-              <li>Network integration</li>
-              <li>Owner's engineering</li>
-            </ul>
-          </article>
-          <article class="platform-card">
-            <h3>Industry</h3>
-            <ul class="check-list">
-              <li>Manufacturing</li>
-              <li>Heavy industry</li>
-              <li>Decarbonisation</li>
-              <li>Energy productivity</li>
-            </ul>
-          </article>
-          <article class="platform-card">
-            <h3>Technology</h3>
-            <ul class="check-list">
-              <li>Universities</li>
-              <li>Demonstration projects</li>
-              <li>Commercialisation</li>
-              <li>Industrialisation</li>
-            </ul>
-          </article>
-          <article class="platform-card">
-            <h3>Government</h3>
-            <ul class="check-list">
-              <li>Policy engagement</li>
-              <li>Investment attraction</li>
-              <li>Economic development</li>
-              <li>International cooperation</li>
-            </ul>
-          </article>
         </div>
       </div>
     </section>
 
-    <section id="market-entry">
+    <section id="deployment-platform">
       <div class="container">
         <div class="section-head">
           <div>
             <div class="section-kicker">Deployment platform</div>
             <h2>Connecting capital, technology, industry and institutions into deployable energy-transition projects.</h2>
           </div>
-          <p>Australia has strong opportunities across renewables, storage, industrial decarbonisation, technology commercialisation and infrastructure. Wasseren helps turn those opportunities into practical pathways by aligning capital, project development, research translation, industry adoption and stakeholder engagement.</p>
+          <p>Australia has strong opportunities across renewables, storage, industrial decarbonisation, technology commercialisation and infrastructure. Wasseren helps turn them into practical pathways by aligning capital, projects, research translation, industry adoption and stakeholder engagement.</p>
         </div>
         <div class="market-grid">
           <article class="market-card feature">
@@ -1137,39 +1097,39 @@
       <div class="container split">
         <div class="image-frame">
           <img src="delivery.jpg" alt="Renewable energy infrastructure and execution planning">
-          <div class="image-label">Investor-grade advisory grounded in development, grid, commercial and delivery experience.</div>
+          <div class="image-label">Practical advisory grounded in development, grid, commercial and delivery experience.</div>
         </div>
         <div>
           <div class="section-kicker">Services</div>
-          <h2>From market intelligence to transaction execution.</h2>
-          <p class="lead">Wasseren combines practitioner insight, commercial judgement and a curated delivery network. The role is not to produce a generic market report; it is to help investors move from interest to qualified action.</p>
+          <h2>From opportunity framing to execution support.</h2>
+          <p class="lead">Wasseren combines practitioner insight, commercial judgement and a curated delivery network to help partners move from early opportunity to qualified action.</p>
           <div class="service-list">
             <div class="service-row">
-              <strong>Retainer</strong>
+              <strong>Engagement</strong>
               <div>
-                <h3>Market engagement</h3>
-                <p>Ongoing local intelligence, regular deal flow, opportunity screening, introductions and market-entry guidance. Retainers may be credited against success fees upon transaction completion.</p>
+                <h3>Ecosystem engagement</h3>
+                <p>Ongoing local intelligence, opportunity screening, introductions and market guidance across capital, project, industry, research and policy networks.</p>
               </div>
             </div>
             <div class="service-row">
               <strong>Execution</strong>
               <div>
-                <h3>Transaction support</h3>
-                <p>Transaction structuring, counterparty coordination, negotiation input, deal progression and closing support once an opportunity is actively pursued.</p>
+                <h3>Project and transaction support</h3>
+                <p>Commercial structuring, counterparty coordination, negotiation input, deal progression and delivery support once an opportunity is actively pursued.</p>
               </div>
             </div>
             <div class="service-row">
               <strong>Strategic</strong>
               <div>
                 <h3>Co-investment and partnerships</h3>
-                <p>Where relevant, support for JV structures, development partnerships and strategic project alignment with Australian developers or technology partners.</p>
+                <p>Support for JV structures, development partnerships and strategic alignment with Australian developers, technology partners, industrial users and institutions.</p>
               </div>
             </div>
             <div class="service-row">
               <strong>Diligence</strong>
               <div>
                 <h3>Technical-commercial review</h3>
-                <p>Feasibility framing, grid-pathway review, project maturity assessment, partner validation and commercial risk analysis across renewable energy and storage opportunities.</p>
+                <p>Feasibility framing, grid-pathway review, project maturity assessment, partner validation and commercial risk analysis across energy-transition opportunities.</p>
               </div>
             </div>
           </div>
@@ -1184,7 +1144,7 @@
             <div class="section-kicker">How we work</div>
             <h2>One coordinated pathway from origination to execution readiness.</h2>
           </div>
-          <p>The process is designed for investors who need trusted Australian market access without building a full local team before the opportunity set is understood.</p>
+          <p>The process is designed for partners who need trusted Australian market access, project judgement and coordinated execution support before committing major resources.</p>
         </div>
         <div class="process">
           <article class="process-step">
@@ -1200,7 +1160,7 @@
           <article class="process-step">
             <span class="number">Step 03</span>
             <h3>Structure</h3>
-            <p>Shape the engagement model, whether acquisition, joint venture, co-development, market-entry mandate or strategic partnership.</p>
+            <p>Shape the engagement model, whether acquisition, joint venture, co-development pathway, commercialisation mandate or strategic partnership.</p>
           </article>
           <article class="process-step">
             <span class="number">Step 04</span>
@@ -1218,7 +1178,7 @@
             <div class="section-kicker">Strategic focus</div>
             <h2>Where capital, technology and execution capability need to align early.</h2>
           </div>
-          <p>Wasseren prioritises sectors where Australian market access, project judgement and partner-chain structuring can materially improve investment quality.</p>
+          <p>Wasseren prioritises sectors where Australian market access, project judgement and partner-chain structuring can materially improve deployment readiness.</p>
         </div>
         <div class="focus-grid">
           <article class="focus-card">
@@ -1260,7 +1220,7 @@
             <div class="section-kicker">Track record</div>
             <h2>Practical experience across capital, projects, research and industrial transition.</h2>
           </div>
-          <p>Wasseren and its collaborator network bring experience that investors can diligence: project origination, grid connection, commercial contracts, policy work, research translation and industrial energy projects.</p>
+          <p>Wasseren and its collaborator network bring experience across project origination, grid connection, commercial contracts, policy work, research translation and industrial energy projects.</p>
         </div>
         <div class="proof">
           <article class="proof-card">
@@ -1287,58 +1247,28 @@
       </div>
     </section>
 
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Capability platform</div>
-            <h2>Specialist inputs investors need before deployment.</h2>
-          </div>
-          <p>Selected capabilities from Wasseren and its collaborators are positioned as investor support, not as a static credentials list.</p>
-        </div>
-        <div class="capability-band">
-          <article class="capability">
-            <h3>Technical diligence</h3>
-            <p>Storage, hydrogen, renewables, grid connection, thermal energy systems, solar PV engineering and renewable storage modelling.</p>
-          </article>
-          <article class="capability">
-            <h3>Commercialisation</h3>
-            <p>Research-to-industry translation, energy storage industrialisation, partner-chain structuring and demonstration pathway design.</p>
-          </article>
-          <article class="capability">
-            <h3>Project execution</h3>
-            <p>Origination, site screening, planning approvals, environmental and heritage studies, EPC/O&M contracts and owner-side coordination.</p>
-          </article>
-          <article class="capability">
-            <h3>Industrial transition</h3>
-            <p>Industrial decarbonisation, energy management systems, GHG footprints, energy-efficiency benchmarking and whole-of-system energy strategy.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section class="section-alt">
       <div class="container outcomes">
         <div class="outcome-panel">
           <div class="section-kicker">Expected outcomes</div>
           <h2>Designed for faster, better-informed deployment.</h2>
-          <p>For investors, the value is not just information. It is disciplined access, stronger local alignment, fewer weak opportunities consuming time, and a more credible path to transaction execution.</p>
+          <p>The value is not just information. It is stronger alignment, fewer weak pathways consuming time, and a clearer route from opportunity to project, partnership or commercial decision.</p>
         </div>
         <div class="outcome-metrics">
           <div class="outcome-metric">
-            <strong>Faster entry</strong>
-            <span>Move from initial market interest to qualified engagement in months rather than years.</span>
+            <strong>Faster pathways</strong>
+            <span>Move from early interest to qualified engagement with clearer next steps.</span>
           </div>
           <div class="outcome-metric">
-            <strong>Better deal flow</strong>
-            <span>Prioritised access to screened opportunities and credible Australian counterparties.</span>
+            <strong>Stronger alignment</strong>
+            <span>Bring capital, technology, industry, research and institutional priorities into a workable structure.</span>
           </div>
           <div class="outcome-metric">
-            <strong>Pricing discipline</strong>
-            <span>Earlier visibility on risk allocation, structural weaknesses and over-priced assets.</span>
+            <strong>Clearer readiness</strong>
+            <span>Earlier visibility on development maturity, grid pathway, commercial logic and delivery requirements.</span>
           </div>
           <div class="outcome-metric">
-            <strong>Local execution</strong>
+            <strong>Local delivery</strong>
             <span>A coordinated interface across developers, advisers, engineers and delivery partners.</span>
           </div>
         </div>
