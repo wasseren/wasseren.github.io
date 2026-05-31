@@ -515,6 +515,68 @@
       color: #e3edf5;
     }
 
+    .why-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+      gap: 22px;
+      margin-bottom: 24px;
+    }
+
+    .why-panel {
+      border-radius: 8px;
+      padding: 28px;
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .why-panel h3 {
+      margin-bottom: 10px;
+      font-size: 25px;
+    }
+
+    .why-panel p {
+      color: #d5e2ed;
+      margin-bottom: 0;
+    }
+
+    .why-core {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+    }
+
+    .why-core span {
+      display: flex;
+      min-height: 94px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--navy);
+      font-weight: 850;
+      line-height: 1.2;
+      padding: 18px;
+    }
+
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .platform-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 24px;
+    }
+
+    .platform-card h3 {
+      color: var(--navy);
+      font-size: 21px;
+      margin-bottom: 14px;
+    }
+
     .process {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -776,6 +838,7 @@
       .section-head,
       .split,
       .market-grid,
+      .why-intro,
       .outcomes,
       .contact-box {
         grid-template-columns: 1fr;
@@ -783,6 +846,8 @@
 
       .grid-3,
       .grid-4,
+      .why-core,
+      .platform-grid,
       .process,
       .capability-band {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -870,6 +935,8 @@
 
       .grid-3,
       .grid-4,
+      .why-core,
+      .platform-grid,
       .process,
       .focus-grid,
       .proof,
@@ -896,7 +963,7 @@
         <span></span>
       </button>
       <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
-        <a href="#market-entry">Market Entry</a>
+        <a href="#why-wasseren">Why Wasseren</a>
         <a href="#services">Services</a>
         <a href="#focus">Focus</a>
         <a href="#track-record">Track Record</a>
@@ -909,8 +976,8 @@
     <section class="hero" aria-label="Wasseren introduction">
       <div class="container hero-inner">
         <div>
-          <span class="eyebrow">Capital · Partnership · Deployment</span>
-          <h1>Accelerating the energy transition through capital, industry partnerships and technology translation.</h1>
+          <span class="eyebrow">Capital · Infrastructure · Technology</span>
+          <h1>Accelerating the energy transition through capital, infrastructure and technology translation.</h1>
           <p class="hero-copy">Wasseren leads and supports investments in energy storage and renewable power assets, while enabling market entry, scale-up and commercialisation of next-generation energy technologies and products.</p>
           <div class="actions">
             <a class="btn btn-primary" href="#market-entry">Explore the model</a>
@@ -938,6 +1005,89 @@
             </div>
           </div>
         </aside>
+      </div>
+    </section>
+
+    <section id="why-wasseren" class="section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Why Wasseren</div>
+            <h2>A practical platform for capital, projects, industry and technology translation.</h2>
+          </div>
+          <p>Wasseren Energy combines development, finance, industrial transition, technology commercialisation and public-sector engagement so opportunities can move from strategy into deployable projects.</p>
+        </div>
+        <div class="why-intro">
+          <article class="why-panel">
+            <h3>A unique combination of capabilities</h3>
+            <p>The model brings together the core inputs needed to shape credible energy-transition investments and partnerships.</p>
+          </article>
+          <div class="why-core" aria-label="Core Wasseren capabilities">
+            <span>Project Development</span>
+            <span>Capital Alignment</span>
+            <span>Industrial Transition</span>
+            <span>Technology Commercialisation</span>
+            <span>Government Engagement</span>
+          </div>
+        </div>
+        <div class="platform-grid" aria-label="Wasseren platform capability areas">
+          <article class="platform-card">
+            <h3>Capital</h3>
+            <ul class="check-list">
+              <li>Investment structuring</li>
+              <li>Climate finance</li>
+              <li>Strategic partnerships</li>
+              <li>Cross-border transactions</li>
+            </ul>
+          </article>
+          <article class="platform-card">
+            <h3>Project Development</h3>
+            <ul class="check-list">
+              <li>Wind</li>
+              <li>Solar</li>
+              <li>BESS</li>
+              <li>Hydrogen</li>
+              <li>Project origination</li>
+            </ul>
+          </article>
+          <article class="platform-card">
+            <h3>Grid &amp; Infrastructure</h3>
+            <ul class="check-list">
+              <li>Grid connection</li>
+              <li>Transmission</li>
+              <li>Substations</li>
+              <li>Network integration</li>
+              <li>Owner's engineering</li>
+            </ul>
+          </article>
+          <article class="platform-card">
+            <h3>Industry</h3>
+            <ul class="check-list">
+              <li>Manufacturing</li>
+              <li>Heavy industry</li>
+              <li>Decarbonisation</li>
+              <li>Energy productivity</li>
+            </ul>
+          </article>
+          <article class="platform-card">
+            <h3>Technology</h3>
+            <ul class="check-list">
+              <li>Universities</li>
+              <li>Demonstration projects</li>
+              <li>Commercialisation</li>
+              <li>Industrialisation</li>
+            </ul>
+          </article>
+          <article class="platform-card">
+            <h3>Government</h3>
+            <ul class="check-list">
+              <li>Policy engagement</li>
+              <li>Investment attraction</li>
+              <li>Economic development</li>
+              <li>International cooperation</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
