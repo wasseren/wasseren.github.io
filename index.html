@@ -561,30 +561,35 @@
 
     .why-matrix {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: 1fr;
       gap: 0;
       padding: 8px 28px;
     }
 
     .why-capability {
-      padding: 24px 20px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      padding: 20px 0;
       border-bottom: 1px solid var(--line);
     }
 
-    .why-capability:nth-last-child(-n + 3) {
+    .why-capability:last-child {
       border-bottom: 0;
     }
 
     .why-capability h3 {
       color: var(--navy);
       font-size: 18px;
-      margin-bottom: 8px;
+      margin: 0;
+      flex: 0 0 210px;
     }
 
     .why-capability p {
       color: var(--muted);
-      margin-bottom: 0;
+      margin: 0;
       font-size: 15px;
+      flex: 1;
     }
 
     .process {
@@ -828,17 +833,8 @@
 
       .grid-3,
       .grid-4,
-      .why-matrix,
       .process {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .why-capability:nth-last-child(-n + 3) {
-        border-bottom: 1px solid var(--line);
-      }
-
-      .why-capability:nth-last-child(-n + 2) {
-        border-bottom: 0;
       }
 
       .process-step {
@@ -923,7 +919,6 @@
 
       .grid-3,
       .grid-4,
-      .why-matrix,
       .process,
       .focus-grid,
       .proof,
@@ -931,12 +926,9 @@
         grid-template-columns: 1fr;
       }
 
-      .why-capability:nth-last-child(-n + 2) {
-        border-bottom: 1px solid var(--line);
-      }
-
-      .why-capability:last-child {
-        border-bottom: 0;
+      .why-capability {
+        flex-direction: column;
+        gap: 6px;
       }
 
       .service-row {
