@@ -286,9 +286,16 @@
     }
 
     .hero-panel h2 {
-      margin-bottom: 14px;
+      margin-bottom: 6px;
       font-size: 18px;
       letter-spacing: 0;
+    }
+
+    .hero-panel-intro {
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
     }
 
     .metrics {
@@ -795,22 +802,6 @@
       font-weight: 800;
     }
 
-    .legal-notice {
-      padding-top: 18px;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-      color: #bdcddb;
-      font-size: 13px;
-      line-height: 1.55;
-    }
-
-    .contact-box > .legal-notice {
-      grid-column: 1 / -1;
-      max-width: none;
-      margin-bottom: 0;
-      color: #bdcddb;
-      font-size: 13px;
-    }
-
     .footer {
       padding: 26px 0;
       background: #06131e;
@@ -823,13 +814,6 @@
       justify-content: space-between;
       gap: 16px;
       flex-wrap: wrap;
-    }
-
-    .footer .legal-notice {
-      width: 100%;
-      margin: 0;
-      padding-top: 16px;
-      font-size: 12px;
     }
 
     @media (max-width: 980px) {
@@ -999,27 +983,24 @@
           </div>
         </div>
         <aside class="hero-panel" aria-label="Selected proof points">
-          <h2>Relevant experience</h2>
+          <h2>Project Delivery Experience</h2>
+          <p class="hero-panel-intro">Experience represented across our project delivery team</p>
           <div class="metrics">
             <div class="metric">
               <strong>10+ GW</strong>
-              <span>Wind Development Portfolio</span>
+              <span>Wind Development Experience</span>
             </div>
             <div class="metric">
               <strong>3+ GW</strong>
-              <span>Battery Energy Storage Systems (BESS)</span>
+              <span>BESS Development Experience</span>
             </div>
             <div class="metric">
               <strong>2.4 GW</strong>
-              <span>Windfarm JDA with Macquarie Asset Management</span>
+              <span>Wind Farm JDA Experience</span>
             </div>
             <div class="metric">
               <strong>150+ MW</strong>
-              <span>Solar PV</span>
-            </div>
-            <div class="metric">
-              <strong>HV Transmission</strong>
-              <span>Grid Infrastructure</span>
+              <span>Solar PV Project Experience</span>
             </div>
           </div>
         </aside>
@@ -1232,21 +1213,21 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="section-kicker">Track record</div>
+            <div class="section-kicker">Team Experience</div>
             <h2>Practical experience across capital, projects, research and industrial transition.</h2>
           </div>
-          <p>Wasseren Energy and its collaborator network bring experience across project identification and development, grid connection, commercial-contract coordination, policy work, research translation and industrial energy projects.</p>
+          <p>Wasseren Energy and its project collaborator network bring experience across project identification and development, grid connection, commercial and contract coordination, policy work, research translation and industrial energy projects.</p>
         </div>
         <div class="proof">
           <article class="proof-card">
             <span class="number">Project development</span>
             <h3>Large-scale renewable and storage development</h3>
-            <p>Experience includes 10 GW+ wind pipeline origination, 3 GW battery pipeline origination, 275+ MW BESS, 500+ MW wind, 150 MW solar PV and high-voltage connection work.</p>
+            <p>Experience spanning more than 10 GW of wind and 3 GW of battery storage pipeline origination, together with involvement in over 275 MW of BESS, 500 MW of wind, 150 MW of solar PV, and high-voltage grid connection projects.</p>
           </article>
           <article class="proof-card">
             <span class="number">Commercial and project support</span>
             <h3>Joint development and adviser coordination</h3>
-            <p>Relevant experience includes work associated with a 2.4 GW windfarm JDA involving Macquarie Asset Management, coordination of technical and legal due diligence, EPC and O&amp;M contract support, PPA-related project work and lender-facing technical information support.</p>
+            <p>Work associated with a 2.4 GW wind farm JDA involving Macquarie Asset Management, together with coordination of independent technical and legal due diligence, EPC and O&amp;M contracting support, PPA-related project work, and preparation of technical information for lenders and their advisers.</p>
           </article>
           <article class="proof-card">
             <span class="number">Market intelligence</span>
@@ -1303,7 +1284,6 @@
           <p>Presence<br><strong>Adelaide-based | National coverage</strong></p>
           <p>Meeting location<br><strong>Level 8, 25 Franklin Street, Adelaide SA 5000</strong></p>
         </aside>
-        <p class="legal-notice">Wasseren Energy provides renewable energy project research, project-development and commercial coordination services. It does not provide financial product advice, make investment recommendations, raise capital, or arrange, negotiate or execute transactions in shares, units or other financial products. Project information is provided for general information purposes and should be independently verified. Where a proposed transaction involves a financial product, any regulated financial services must be provided by an appropriately licensed or authorised provider.</p>
       </div>
     </section>
   </main>
@@ -1311,7 +1291,6 @@
   <footer class="footer">
     <div class="container">
       <span>Wasseren Energy</span>
-      <p class="legal-notice">Wasseren Energy provides renewable energy project research, project-development and commercial coordination services. It does not provide financial product advice, make investment recommendations, raise capital, or arrange, negotiate or execute transactions in shares, units or other financial products. Project information is provided for general information purposes and should be independently verified. Where a proposed transaction involves a financial product, any regulated financial services must be provided by an appropriately licensed or authorised provider.</p>
     </div>
   </footer>
   <script>
